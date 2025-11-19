@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简介 - LUYI个人作品集</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 导航栏 -->
+        <nav class="nav-bar">
+            <a href="index.html" class="nav-link">首页</a>
+            <a href="about.html" class="nav-link active">个人简介</a>
+            <a href="projects.html" class="nav-link">项目经历</a>
+            <a href="design.html" class="nav-link">平面视觉</a>
+            <a href="photography.html" class="nav-link">摄影</a>
+        </nav>
+
+        <!-- 搜索栏 -->
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="搜索..." class="search-bar">
+        </div>
+
+        <!-- 页面标题 -->
+        <header class="page-header">
+            <h1 class="page-title">个人简介</h1>
+            <div class="title-line"></div>
+        </header>
+
+        <!-- 内容区域 -->
+        <main class="content-area">
+            <div class="about-section">
+                <div class="about-image-container">
+                    <!-- 【需要添加】在这里添加你的个人照片 -->
+                    <!-- 将你的照片命名为 about-photo.jpg 并放在 images 文件夹中 -->
+                    <img src="images/about-photo.jpg" alt="个人照片" class="about-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="placeholder-box" style="display: none;">
+                        <p>添加个人照片</p>
+                        <p class="placeholder-hint">images/about-photo.jpg</p>
+                    </div>
+                </div>
+
+                <div class="about-text">
+                    <h2>关于我</h2>
+                    <p>
+                        我叫陆艺，是一名兼具设计思维与前端开发能力的多栖创意人。过去两年主要聚焦于用户研究、
+                        小程序/APP 产品设计及落地，实现从概念洞察、交互流程到代码实现的完整闭环。我擅长通过
+                        数据与访谈挖掘用户需求，并将洞察转化为可复用的设计系统与视觉语言，以黑白极简的现代风格
+                        呈现作品。
+                    </p>
+
+                    <h2>教育背景</h2>
+                    <p>
+                        浙江大学 · 艺术与科技（感知、通信与控制方向）<br>
+                        预计毕业：2027年6月<br>
+                        重点课程：Web设计与开发、信息可视化与交互、微信小程序综合应用、人工智能与社会计算、
+                        跨媒体数据可视化、Python程序设计等。
+                    </p>
+
+                    <h2>项目经历概览</h2>
+                    <ul class="skills-list">
+                        <li><strong>唤喵HIPONG抖音小程序 · 前端工程师</strong>：主导赛事预约、动态发布、赛事直播
+                            等核心场景的交互与前端开发，搭建组件库并优化多人协作流程。</li>
+                        <li><strong>区域描猫地图微信小程序 · 前端工程师</strong>：用 WXML/WXSS/JavaScript 构建
+                            地理标注与打卡任务体系，实现猫咪救助信息的结构化展示。</li>
+                        <li><strong>面向儿童的情绪博物馆节庆认知 APP · UI 设计师</strong>：负责视觉风格与互动叙事，
+                            将情绪卡牌、节庆任务与心理引导结合，帮助儿童在游戏化体验中识别情绪。</li>
+                        <li><strong>行李箱便捷装辅助手提 · 产品设计师</strong>：完成从需求洞察、形态设计到落地打样，
+                            输出 1:1 实体模型并获得导师好评。</li>
+                    </ul>
+
+                    <h2>技能专长</h2>
+                    <ul class="skills-list">
+                        <li><strong>用户研究：</strong>问卷、访谈、情境任务分析，快速获取洞察并沉淀模型。</li>
+                        <li><strong>视觉与动效：</strong>擅长黑白极简风格、排版系统与动效表达，确保体验一致性。</li>
+                        <li><strong>代码实现：</strong>熟悉 HTML/CSS/JavaScript 及小程序端开发，能够在 UI 与前端之间
+                            架起高效协同桥梁。</li>
+                        <li><strong>硬件与原型：</strong>掌握 Arduino、3D 打印与实体打样流程，可快速验证概念。</li>
+                    </ul>
+
+                    <h2>奖项与荣誉</h2>
+                    <ul class="skills-list">
+                        <li>斩获抖音 AI 创意大赛决赛三等奖（48 小时内完成 MVP 并成功路演）。</li>
+                        <li>校三等奖学金、校级竞赛多项优胜；浙江省国际大学生创新大赛银奖。</li>
+                        <li>成绩专业前 20%，多次作为项目代表汇报方案并获导师推荐。</li>
+                    </ul>
+
+                    <h2>联系方式</h2>
+                    <p>
+                        邮箱：15957962301@163.com<br>
+                        电话：+86 15957962301<br>
+                        地址：浙江省杭州市西湖区西溪街道 浙江大学西溪校区 15幢215
+                    </p>
+                </div>
+            </div>
+        </main>
+
+        <!-- 页脚 -->
+        <footer class="footer">
+            <p>&copy; LUYI个人作品集</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
