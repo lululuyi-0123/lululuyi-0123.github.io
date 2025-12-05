@@ -3,61 +3,457 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LUYI个人作品集</title>
+    <title>LU YI - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <!-- 搜索栏 -->
-        <div class="search-container">
-            <input type="text" id="searchInput" placeholder="搜索..." class="search-bar">
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-left">
+            <div class="profile-picture">
+                <img src="assets/profile.jpg" alt="LU YI" id="profileImg">
+            </div>
+            <h1 class="name">LU YI</h1>
+        </div>
+        <nav class="nav-menu">
+            <a href="#home" class="nav-item active" data-page="home">Home</a>
+            <a href="#about" class="nav-item" data-page="about">About Me</a>
+            <a href="#project" class="nav-item" data-page="project">Project</a>
+            <a href="#contact" class="nav-item" data-page="contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Welcome Circle Container - 独立容器，最上层 -->
+    <div class="welcome-section" id="homePage">
+        <div class="welcome-circle" id="welcomeCircle">
+            <h2 class="welcome-name">LU YI</h2>
+            <p class="welcome-text">Welcome to my portfolio website.</p>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <!-- Image Carousel Background -->
+        <div class="carousel-container">
+            <div class="carousel-slides" id="carouselSlides">
+                <!-- 图片将通过JavaScript动态添加 -->
+            </div>
         </div>
 
-        <!-- 主标题 -->
-        <header class="main-header">
-            <h1 class="site-title">LUYI个人作品集</h1>
-            <p class="site-subtitle">PORTFOLIO</p>
-        </header>
+        <!-- About Me Page -->
+        <div class="page-content" id="aboutPage" style="display: none;">
+            <!-- 空白页面 -->
+        </div>
 
-        <!-- 四个主要板块 -->
-        <main class="main-grid">
-            <a href="about.html" class="grid-item">
-                <div class="grid-content">
-                    <h2 class="grid-title">个人简介</h2>
-                    <p class="grid-subtitle">ABOUT</p>
-                    <div class="grid-line"></div>
+        <!-- Project Page -->
+        <div class="page-content" id="projectPage" style="display: none;">
+            <div class="project-wrapper">
+                <!-- 分类筛选栏（五个小导航栏） -->
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="software">Software Applications</button>
+                    <button class="filter-btn" data-filter="industrial">Industrial Design</button>
+                    <button class="filter-btn" data-filter="photo">Photography Work</button>
+                    <button class="filter-btn" data-filter="painting">Painting</button>
+                    <button class="filter-btn" data-filter="others">Others</button>
                 </div>
-            </a>
 
-            <a href="projects.html" class="grid-item">
-                <div class="grid-content">
-                    <h2 class="grid-title">项目经历</h2>
-                    <p class="grid-subtitle">PROJECTS</p>
-                    <div class="grid-line"></div>
+                <!-- Software Applications 区域 -->
+                <div id="softwareSection">
+                    <!-- 项目列表（使用三张大图：Group 24 / 25 / 26） -->
+                    <div class="projects-list">
+                        <div class="project-card-large" data-project="hipong">
+                            <img src="assets/projects/Group 24.png" alt="Software Applications - Group 24" class="project-full-img">
+                        </div>
+
+                        <div class="project-card-large" data-project="meowtrack">
+                            <img src="assets/projects/Group 25.png" alt="Software Applications - Group 25" class="project-full-img">
+                        </div>
+
+                        <div class="project-card-large" data-project="emotriend">
+                            <img src="assets/projects/Group 26.png" alt="Software Applications - Group 26" class="project-full-img">
+                        </div>
+                    </div>
                 </div>
-            </a>
 
-            <a href="design.html" class="grid-item">
-                <div class="grid-content">
-                    <h2 class="grid-title">平面视觉</h2>
-                    <p class="grid-subtitle">DESIGN</p>
-                    <div class="grid-line"></div>
+                <!-- Industrial Design 区域 -->
+                <div id="industrialSection" style="display: none;">
+                    <div class="industrial-frames">
+                        <img src="assets/industrial/Frame 9.png" alt="Industrial Design Frame 9" class="industrial-frame-img">
+                        <img src="assets/industrial/Frame 10.png" alt="Industrial Design Frame 10" class="industrial-frame-img">
+                        <img src="assets/industrial/Frame 11.png" alt="Industrial Design Frame 11" class="industrial-frame-img">
+                        <img src="assets/industrial/Frame 12.png" alt="Industrial Design Frame 12" class="industrial-frame-img">
+                        <img src="assets/industrial/Frame 14.png" alt="Industrial Design Frame 14" class="industrial-frame-img">
+                    </div>
                 </div>
-            </a>
 
-            <a href="photography.html" class="grid-item">
-                <div class="grid-content">
-                    <h2 class="grid-title">摄影</h2>
-                    <p class="grid-subtitle">PHOTOGRAPHY</p>
-                    <div class="grid-line"></div>
+                <!-- Photography Works 区域 -->
+                <div id="photoSection" style="display: none;">
+                    <div class="photo-video-wrapper">
+                        <video class="photo-video" controls preload="metadata">
+                            <source src="assets/photo/纪录片最终版.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <p class="photo-video-caption">Biographical documentary</p>
+
+                    <div class="photo-grid">
+                        <!-- 大连系列 -->
+                        <img src="assets/photo/大连-1.JPG" alt="Dalian 1" class="photo-item">
+                        <img src="assets/photo/大连-2.JPG" alt="Dalian 2" class="photo-item">
+                        <img src="assets/photo/大连-3.JPG" alt="Dalian 3" class="photo-item">
+                        <img src="assets/photo/大连-4.JPG" alt="Dalian 4" class="photo-item">
+                        <img src="assets/photo/大连-5.JPG" alt="Dalian 5" class="photo-item">
+                        <img src="assets/photo/大连-6.JPG" alt="Dalian 6" class="photo-item">
+                        <img src="assets/photo/大连-7.JPG" alt="Dalian 7" class="photo-item">
+                        <img src="assets/photo/大连-8.JPG" alt="Dalian 8" class="photo-item">
+                        <img src="assets/photo/大连-9.JPG" alt="Dalian 9" class="photo-item">
+                        <img src="assets/photo/大连-10.JPG" alt="Dalian 10" class="photo-item">
+                        <img src="assets/photo/大连-11.JPG" alt="Dalian 11" class="photo-item">
+                        <img src="assets/photo/大连-12.JPG" alt="Dalian 12" class="photo-item">
+
+                        <!-- 西湖早起系列 -->
+                        <img src="assets/photo/西湖早起-1.JPG" alt="West Lake Morning 1" class="photo-item">
+                        <img src="assets/photo/西湖早起-2.JPG" alt="West Lake Morning 2" class="photo-item">
+                        <img src="assets/photo/西湖早起-3.JPG" alt="West Lake Morning 3" class="photo-item">
+                        <img src="assets/photo/西湖早起-4.JPG" alt="West Lake Morning 4" class="photo-item">
+                        <img src="assets/photo/西湖早起-5.JPG" alt="West Lake Morning 5" class="photo-item">
+                        <img src="assets/photo/西湖早起-6.JPG" alt="West Lake Morning 6" class="photo-item">
+                        <img src="assets/photo/西湖早起-7.JPG" alt="West Lake Morning 7" class="photo-item">
+                        <img src="assets/photo/西湖早起-9.JPG" alt="West Lake Morning 9" class="photo-item">
+                        <img src="assets/photo/西湖早起-10.JPG" alt="West Lake Morning 10" class="photo-item">
+                        <img src="assets/photo/西湖早起-11.JPG" alt="West Lake Morning 11" class="photo-item">
+
+                        <!-- 西湖系列 -->
+                        <img src="assets/photo/西湖-1.JPG" alt="West Lake 1" class="photo-item">
+                        <img src="assets/photo/西湖-2.JPG" alt="West Lake 2" class="photo-item">
+                        <img src="assets/photo/西湖-3.JPG" alt="West Lake 3" class="photo-item">
+                        <img src="assets/photo/西湖-8.JPG" alt="West Lake 8" class="photo-item">
+                        <img src="assets/photo/西湖-9.JPG" alt="West Lake 9" class="photo-item">
+                        <img src="assets/photo/西湖-10.JPG" alt="West Lake 10" class="photo-item">
+                        <img src="assets/photo/西湖-11.JPG" alt="West Lake 11" class="photo-item">
+                        <img src="assets/photo/西湖-12.JPG" alt="West Lake 12" class="photo-item">
+                        <img src="assets/photo/西湖-13.JPG" alt="West Lake 13" class="photo-item">
+                        <img src="assets/photo/西湖-14.JPG" alt="West Lake 14" class="photo-item">
+                        <img src="assets/photo/西湖-15.JPG" alt="West Lake 15" class="photo-item">
+                        <img src="assets/photo/西湖-18.JPG" alt="West Lake 18" class="photo-item">
+                        <img src="assets/photo/西湖-21.JPG" alt="West Lake 21" class="photo-item">
+
+                        <!-- 人文街拍系列 -->
+                        <img src="assets/photo/陆艺-你好.JPG" alt="Street 你好" class="photo-item">
+                        <img src="assets/photo/陆艺-屹立.JPG" alt="Street 屹立" class="photo-item">
+                        <img src="assets/photo/陆艺-摇橹.JPG" alt="Street 摇橹" class="photo-item">
+                        <img src="assets/photo/陆艺-昂首.JPG" alt="Street 昂首" class="photo-item">
+                        <img src="assets/photo/陆艺-昏鸭.JPG" alt="Street 昏鸭" class="photo-item">
+                        <img src="assets/photo/陆艺-每一个落日前.JPG" alt="Street 每一个落日前" class="photo-item">
+                        <img src="assets/photo/陆艺-淡妆也相宜.JPG" alt="Street 淡妆也相宜" class="photo-item">
+                        <img src="assets/photo/陆艺-致敬何藩.JPG" alt="Street 致敬何藩" class="photo-item">
+                        <img src="assets/photo/陆艺-融融.JPG" alt="Street 融融" class="photo-item">
+                        <img src="assets/photo/陆艺-铜雀春深.JPG" alt="Street 铜雀春深" class="photo-item">
+
+                        <!-- 调色系列 -->
+                        <img src="assets/photo/风景调色 (1 - 9).png" alt="Color Grading 1" class="photo-item">
+                        <img src="assets/photo/风景调色 (2 - 9).png" alt="Color Grading 2" class="photo-item">
+                        <img src="assets/photo/风景调色 (3 - 9).png" alt="Color Grading 3" class="photo-item">
+                        <img src="assets/photo/风景调色 (4 - 9).png" alt="Color Grading 4" class="photo-item">
+                        <img src="assets/photo/风景调色 (5 - 9) - 副本.png" alt="Color Grading 5 Copy" class="photo-item">
+                        <img src="assets/photo/风景调色 (6 - 9).png" alt="Color Grading 6" class="photo-item">
+                        <img src="assets/photo/风景调色 (7 - 9).png" alt="Color Grading 7" class="photo-item">
+                        <img src="assets/photo/风景调色 (8 - 9) - 副本.png" alt="Color Grading 8 Copy" class="photo-item">
+                        <img src="assets/photo/风景调色 (9 - 9).png" alt="Color Grading 9" class="photo-item">
+
+                        <!-- 其他照片 -->
+                        <img src="assets/photo/IMG_4280.JPG" alt="Photo IMG_4280" class="photo-item">
+                        <img src="assets/photo/三墩老照相馆-7.jpg" alt="Sandun Old Photo Studio 7" class="photo-item">
+                    </div>
                 </div>
-            </a>
-        </main>
+            </div>
+        </div>
 
-        <!-- 页脚 -->
-        <footer class="footer">
-            <p>&copy; LUYI个人作品集</p>
-        </footer>
+        <!-- Project Detail Pages -->
+        <div class="page-content project-detail-page hipong-detail-page" id="hipongPage" style="display: none;">
+            <button class="back-button" onclick="navigateToPage('project')">← Back</button>
+
+            <div class="hipong-detail-container">
+                <div class="hipong-top-section">
+                    <!-- 左侧竖版宣传图 -->
+                    <div class="hipong-promo-left">
+                        <img src="assets/projects/宣传竖.png" alt="H!PONG Promo" class="hipong-promo-img">
+                    </div>
+
+                    <!-- 右侧文字说明 -->
+                    <div class="hipong-info-right">
+                        <h1 class="hipong-title">H!PONG</h1>
+                        <h2 class="hipong-subtitle">Douyin Mini Program</h2>
+                        <p class="hipong-intro">
+                            This mini program is a location-based, AI-recommended tool for organizing offline gatherings
+                            and team-building activities. It helps users quickly determine a meeting spot, generate
+                            activity plans, and initiate group events.
+                        </p>
+
+                        <h3 class="hipong-section-heading">Four functional modules</h3>
+                        <div class="hipong-modules">
+                            <div class="hipong-module-card">
+                                <h4>City Meet-up</h4>
+                                <p>
+                                    Supports simultaneous multi-user location tracking and uses AI to recommend meeting
+                                    spots based on location and individual preferences.
+                                </p>
+                            </div>
+                            <div class="hipong-module-card">
+                                <h4>Team-building Plan Creation</h4>
+                                <p>
+                                    Input the duration, type, budget, and more, and the AI will help generate a detailed,
+                                    customizable team-building plan.
+                                </p>
+                            </div>
+                            <div class="hipong-module-card">
+                                <h4>Social Gathering</h4>
+                                <p>
+                                    Users can create or join group events, and the system intelligently recommends
+                                    sessions they may be interested in based on their preferences.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 中部视频区域 -->
+                <div class="hipong-video-section">
+                    <div class="hipong-video-wrapper">
+                        <video class="hipong-video" controls preload="metadata">
+                            <source src="https://github.com/lululuyi-0123/my-portfolio-website/releases/download/video1/H.PONG.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <p class="hipong-video-caption">Function Demo Video</p>
+                </div>
+
+                <!-- 底部文档预览 -->
+                <div class="hipong-doc-section center-doc" id="hipongDocTrigger">
+                    <div class="hipong-doc-left">
+                        <p class="hipong-doc-text">
+                            Click to view the full<br>instruction document
+                        </p>
+                        <div class="hipong-doc-arrow">▼</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-content project-detail-page" id="meowtrackPage" style="display: none;">
+            <button class="back-button" onclick="navigateToPage('project')">← Back</button>
+
+            <div class="hipong-detail-container">
+                <div class="hipong-top-section">
+                    <!-- 左侧大图 -->
+                    <div class="hipong-promo-left">
+                        <img src="assets/projects/小猫.png" alt="MeowTrack Promo" class="hipong-promo-img">
+                    </div>
+
+                    <!-- 右侧文字说明 -->
+                    <div class="hipong-info-right">
+                        <h1 class="hipong-title">MeowTrack</h1>
+                        <h2 class="hipong-subtitle">WeChat Mini Program</h2>
+                        <p class="hipong-intro">
+                            Designed for cat lovers in a specific area, this “cat-petting map” guides users to friendly
+                            cats, supports tracking stray cats’ whereabouts, and promotes healthy feeding practices.
+                        </p>
+
+                        <h3 class="hipong-section-heading">Four functional modules</h3>
+                        <div class="hipong-modules">
+                            <div class="hipong-module-card">
+                                <h4>Sharing Community</h4>
+                                <p>
+                                    All cat-related posts you’ve published can be viewed here, where you can see their
+                                    adorable moments.
+                                </p>
+                            </div>
+                            <div class="hipong-module-card">
+                                <h4>Cat Profiles</h4>
+                                <p>
+                                    All registered cats are listed here, where you can view their activity trails and
+                                    feeding records.
+                                </p>
+                            </div>
+                            <div class="hipong-module-card">
+                                <h4>Add to collection</h4>
+                                <p>
+                                    After you favorite a cat, it will appear on your profile for easy viewing.
+                                </p>
+                            </div>
+                            <div class="hipong-module-card">
+                                <h4>Post</h4>
+                                <p>
+                                    Posts you publish will appear in the community feed. You can upload cute photos of
+                                    the cats, your current location, and what you’ve fed them.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 中部视频区域 -->
+                <div class="hipong-video-section">
+                    <div class="hipong-video-wrapper">
+                        <video class="hipong-video" controls preload="metadata">
+                            <source src="assets/projects/猫咪微信小程序演示.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <p class="hipong-video-caption">Function Demo Video</p>
+                </div>
+
+                <!-- 底部文档预览 -->
+                <div class="hipong-doc-section center-doc" id="meowDocTrigger">
+                    <div class="hipong-doc-left">
+                        <p class="hipong-doc-text">
+                            Click to view the full<br>instruction document
+                        </p>
+                        <div class="hipong-doc-arrow">▼</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-content project-detail-page emotriend-detail-page" id="emotriendPage" style="display: none;">
+            <button class="back-button" onclick="navigateToPage('project')">← Back</button>
+
+            <div class="emotriend-detail-container">
+                <!-- 顶部多手机轮播 -->
+                <div class="emotriend-carousel-section">
+                    <div class="emotriend-carousel-viewport">
+                        <div class="emotriend-phone-carousel" id="emotriendCarousel">
+                            <div class="emotriend-phone-slide active">
+                                <img src="assets/projects/PHONE-1.png" alt="Emotriend Screen 1" class="emotriend-phone-img">
+                            </div>
+                            <div class="emotriend-phone-slide">
+                                <img src="assets/projects/PHONE-2.png" alt="Emotriend Screen 2" class="emotriend-phone-img">
+                            </div>
+                            <div class="emotriend-phone-slide">
+                                <img src="assets/projects/PHONE-3.png" alt="Emotriend Screen 3" class="emotriend-phone-img">
+                            </div>
+                            <div class="emotriend-phone-slide">
+                                <img src="assets/projects/PHONE-4.png" alt="Emotriend Screen 4" class="emotriend-phone-img">
+                            </div>
+                            <div class="emotriend-phone-slide">
+                                <img src="assets/projects/PHONE-5.png" alt="Emotriend Screen 5" class="emotriend-phone-img">
+                            </div>
+                            <div class="emotriend-phone-slide">
+                                <img src="assets/projects/PHONE-6.png" alt="Emotriend Screen 6" class="emotriend-phone-img">
+                            </div>
+                            <div class="emotriend-phone-slide">
+                                <img src="assets/projects/PHONE-7.png" alt="Emotriend Screen 7" class="emotriend-phone-img">
+                            </div>
+                            <div class="emotriend-phone-slide">
+                                <img src="assets/projects/PHONE.png" alt="Emotriend Screen 8" class="emotriend-phone-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="emotriend-dots" id="emotriendDots"></div>
+                </div>
+
+                <!-- 中部标题与简介 -->
+                <div class="emotriend-text-section">
+                    <h1 class="emotriend-title">Emotriend</h1>
+                    <h2 class="emotriend-subtitle">Application</h2>
+                    <p class="emotriend-intro">
+                        Combining AI-based emotion recognition with gamified interaction, this system builds a virtual
+                        companion that helps children identify and regulate their emotions, while also providing a
+                        dedicated parent portal.
+                    </p>
+                </div>
+
+                <!-- 底部文档预览 -->
+                <div class="hipong-doc-section center-doc" id="emotDocTrigger">
+                    <div class="hipong-doc-left">
+                        <p class="hipong-doc-text">
+                            Click to view the full<br>instruction document
+                        </p>
+                        <div class="hipong-doc-arrow">▼</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Page -->
+        <div class="page-content" id="contactPage" style="display: none;">
+            <div class="contact-wrapper">
+                <div class="contact-email-row">
+                    <img src="assets/contact/streamline-cyber_email-2.png" alt="Email icon" class="contact-email-icon">
+                    <span class="contact-email-text">Email : 15957962301@163.com</span>
+                </div>
+
+                <div class="contact-social-section">
+                    <h2 class="contact-social-title">Social Media</h2>
+                    <div class="contact-social-icons">
+                        <button class="social-btn" id="socialDouyin" aria-label="Douyin">
+                            <img src="assets/contact/image 9.png" alt="Douyin" class="social-icon-img">
+                        </button>
+                        <button class="social-btn" id="socialWeibo" aria-label="Weibo">
+                            <img src="assets/contact/image 6.png" alt="Weibo" class="social-icon-img">
+                        </button>
+                        <button class="social-btn" id="socialXhs" aria-label="Xiaohongshu">
+                            <img src="assets/contact/image 8.png" alt="Xiaohongshu" class="social-icon-img">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- H!PONG 说明文档弹窗 -->
+    <div class="doc-modal" id="hipongDocModal">
+        <div class="doc-modal-overlay" id="hipongDocOverlay"></div>
+        <div class="doc-modal-content">
+            <button class="doc-modal-close" id="hipongDocClose">×</button>
+            <div class="doc-scroll-container">
+                <img src="assets/projects/嗨碰H!PONG_技术方案书与项目说明_00.png" alt="H!PONG Full Document" class="doc-long-img">
+            </div>
+        </div>
+    </div>
+
+    <!-- MeowTrack 说明文档弹窗 -->
+    <div class="doc-modal" id="meowDocModal">
+        <div class="doc-modal-overlay" id="meowDocOverlay"></div>
+        <div class="doc-modal-content">
+            <button class="doc-modal-close" id="meowDocClose">×</button>
+            <div class="doc-scroll-container">
+                <img src="assets/projects/猫咪微信小程序说明文档_01.png" alt="MeowTrack Full Document" class="doc-long-img">
+            </div>
+        </div>
+    </div>
+
+    <!-- Emotriend 说明文档弹窗 -->
+    <div class="doc-modal" id="emotDocModal">
+        <div class="doc-modal-overlay" id="emotDocOverlay"></div>
+        <div class="doc-modal-content">
+            <button class="doc-modal-close" id="emotDocClose">×</button>
+            <div class="doc-scroll-container">
+                <img src="assets/projects/情绪小伙伴说明文档_00.png" alt="Emotriend Full Document" class="doc-long-img">
+            </div>
+        </div>
+    </div>
+
+    <!-- Photography Works 图片大图弹窗 -->
+    <div class="doc-modal" id="photoModal">
+        <div class="doc-modal-overlay" id="photoModalOverlay"></div>
+        <div class="doc-modal-content photo-modal-content">
+            <button class="doc-modal-close" id="photoModalClose">×</button>
+            <div class="doc-scroll-container photo-scroll-container">
+                <img src="" alt="Photo Preview" class="doc-long-img" id="photoModalImg">
+            </div>
+        </div>
+    </div>
+
+    <!-- 抖音二维码弹窗 -->
+    <div class="doc-modal" id="douyinModal">
+        <div class="doc-modal-overlay" id="douyinModalOverlay"></div>
+        <div class="doc-modal-content douyin-modal-content">
+            <button class="doc-modal-close" id="douyinModalClose">×</button>
+            <div class="doc-scroll-container douyin-scroll-container">
+                <img src="assets/contact/抖音二维码.png" alt="Douyin QR Code" class="doc-long-img">
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
